@@ -125,6 +125,9 @@ To make any changes to your application manually, use the following steps:
 * Save the file
 * The browser updates automatically
 
+### Editing style
+Typically, style such as colors, fonts, etc., will be found in the CSS files. `App.css` or `index.css` will contain any of these styling choices that is used, and you can edit color codes and font sizes easily without impacting the logic of your app.
+
 ## Coding with Agentic AI
 VSCode’s Agent mode can help you go from idea → working code by generating files, editing multiple parts of your project, and fixing errors with you. Now that you have a template, VSCode can easily work to develop features on top of the template. 
 
