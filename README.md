@@ -140,11 +140,9 @@ You can also ask a separate LLM (such as ChatGPT, Gemini, etc.) to create a prom
 ### Debug with the Agent
 When something breaks, paste the error and ask for a fix. If your app won’t run, copy the exact terminal error and try asking:
 
-“Here’s my error. Explain what it means and give the smallest fix.”
-
-“Fix this without changing the project structure.”
-
-“Show me the exact file + lines to edit.”
+* “Here’s my error. Explain what it means and make minimal edits to fix the error.”
+* “My program unexpectedly does the following ... Please fix this so that it does ... without changing the project structure.”
+* “Please add the following feature to my application...”
 
 ## Minimal Project Structure
 ```
@@ -163,10 +161,12 @@ When something breaks, paste the error and ask for a fix. If your app won’t ru
 ```
 
 ## Next steps
-* To let anyone use your web application: [Vercel can host React applications online](https://vercel.com/kb/guide/deploying-react-with-vercel)
-* To collaborate and host your code on the cloud: [VSCode connects easily to GitHub](https://code.visualstudio.com/docs/sourcecontrol/quickstart)
+* To let anyone use your web application: [Vercel can host React applications online for free](https://vercel.com/kb/guide/deploying-react-with-vercel)
+* To collaborate and host your code on the cloud: [VSCode connects easily to GitHub to enable collaboration and access from servers like Vercel](https://code.visualstudio.com/docs/sourcecontrol/quickstart)
 * To learn more about React: [React provides helpful documentation](https://react.dev/learn)
-* To style your application: [CSS is the standard and Mozilla provides a helpful tutorial](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+* To style your application: [CSS is the standard used and Mozilla provides a helpful tutorial](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+* Add login/logout features and accounts: [Passport may be a helpful authentication tool, though many exist](https://www.passportjs.org/)
+* Connect your application to on AI provider: [Gemini provides a helpful toolkit for JavaScript](https://ai.google.dev/gemini-api/docs/quickstart#javascript_1)
 
 ## Summary
 Congratulations, you've now set up your own web app to be built into anything you choose!
