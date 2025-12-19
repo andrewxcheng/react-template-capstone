@@ -1,9 +1,9 @@
-# Minimal React + Vite Template
+# Minimal Web Application Template For Capstone
 
 This repository is an extremely minimal setup for building a web application using React.
 It is designed for beginners or anyone who wants a clean starting point.
 
-This guide walks you from zero → writing JSX, assuming no prior setup.
+This guide walks you from zero → creating a web application, assuming no prior setup.
 
 ## Installation Guide
 ### 1. Install Prerequisites
@@ -48,7 +48,7 @@ Inside the terminal, you'll need to install the template on your computer.
 Type the following into your terminal:
 `npm install`
 
-This installs React, Vite, and all required packages. These are the dependencies that your project runs on.
+This installs the coding languages and all related code packages. These are the dependencies that your project runs on.
 
 You only need to do this once throughout the lifespan of your project (or whenever dependencies change).
 
@@ -57,20 +57,21 @@ You only need to do this once throughout the lifespan of your project (or whenev
 To start your web application, run the following on your terminal:
 `npm run dev`
 
-You should see output similar to:
-
+You should see output in the terminal similar to:
+```
 VITE vX.X.X  ready in XXX ms
 ➜  Local:   http://localhost:5173/
+```
 
 You can then open the URL in your browser to see your application. To close the server, use Ctrl+C in the terminal.
 
 Congratulations, your web application is now running!
 
-## Making Changes to Your Application
-JSX allows you to write HTML-like code inside JavaScript. Here, the code simply creates a page with a greeting in a heading.
+## Making Changes to Your Application Manually
+This application uses a programming language called JSX that allows you to write HTML-like code inside JavaScript. Here, the code simply creates a page with a greeting in a heading.
 
 Example (src/App.jsx):
-```
+```JSX
 function App() {
   return (
     <div>
@@ -96,7 +97,8 @@ Some other elements you may want to include in your application include:
 
 `<img>`
 * Displays an image based on a source location
-```
+Example:
+```JSX
 <img src="/assets/myImage.png" />
 ```
 
@@ -110,9 +112,10 @@ Some other elements you may want to include in your application include:
 
 `<form>`
 * Creates a form for your application
-```
+Example:
+```JSX
 <form>
-  <input type="text" placeholder="Username" />
+  <input type="text" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -126,13 +129,13 @@ To make any changes to your application manually, use the following steps:
 VSCode’s Agent mode can help you go from idea → working code by generating files, editing multiple parts of your project, and fixing errors with you. Now that you have a template, VSCode can easily work to develop features on top of the template. 
 
 ### Tell the Agent what you want to build
-Open the Agent/Agent Build panel (varies by extension, but usually in the sidebar or command palette).
+Open the Agent/Agent Build panel from View → Chat. This opens a chat interface on the side of your code.
 
-Give it a clear goal, plus constraints. Example prompt:
+You can communicate with the chat to improve or iterate on your application. Example prompt:
 
 “Create an expense management application that has a chat interface for receipts to be uploaded.”
 
-You can also ask a separate LLM to create a prompt, so that features are more specific. Try asking an LLM for a project scaffold to feed into a coding agent, and the LLM will create a framework you can provide VSCode.
+You can also ask a separate LLM (such as ChatGPT, Gemini, etc.) to create a prompt, so that it can provide a first draft of a project outline, which can then be edited further. Try asking an LLM for a project scaffold to feed into a coding agent, and the LLM will create a framework that you can then enter into VSCode's Agent.
 
 ### Debug with the Agent
 When something breaks, paste the error and ask for a fix. If your app won’t run, copy the exact terminal error and try asking:
@@ -158,6 +161,12 @@ When something breaks, paste the error and ask for a fix. If your app won’t ru
     ├── index.css
     └── App.css
 ```
+
+## Next steps
+* To let anyone use your web application: [Vercel can host React applications online](https://vercel.com/kb/guide/deploying-react-with-vercel)
+* To collaborate and host your code on the cloud: [VSCode connects easily to GitHub](https://code.visualstudio.com/docs/sourcecontrol/quickstart)
+* To learn more about React: [React provides helpful documentation](https://react.dev/learn)
+* To style your application: [CSS is the standard and Mozilla provides a helpful tutorial](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
 
 ## Summary
 Congratulations, you've now set up your own web app to be built into anything you choose!
