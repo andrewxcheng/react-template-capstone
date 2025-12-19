@@ -42,12 +42,10 @@ After opening a template in VS Code, you need to open a Windows terminal because
 To open a terminal:
 * Click Terminal → New Terminal
 
-To open the terminal with shortcuts:
-* Windows/Linux: `Ctrl + ``
-* Mac: `Cmd + ``
-
 ### 5. Install Dependencies
-Inside the terminal, you'll need to install the template on your computer. Type the following into your terminal:
+Inside the terminal, you'll need to install the template on your computer.
+
+Type the following into your terminal:
 `npm install`
 
 This installs React, Vite, and all required packages. These are the dependencies that your project runs on.
@@ -64,11 +62,89 @@ You should see output similar to:
 VITE vX.X.X  ready in XXX ms
 ➜  Local:   http://localhost:5173/
 
-You can then open the URL in your browser to see your application.
+You can then open the URL in your browser to see your application. To close the server, use Ctrl+C in the terminal.
 
 Congratulations, your web application is now running!
 
+## Making Changes to Your Application
+JSX allows you to write HTML-like code inside JavaScript. Here, the code simply creates a page with a greeting in a heading.
+
+Example (src/App.jsx):
+```
+function App() {
+  return (
+    <div>
+      <h1>Hello! This is my React+Express Application</h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
+The code works as following:
+`<div>` 
+* A `<div>` is a container element
+* It groups content together on the page
+
+`<h1>`
+* `<h1>` is a heading tag. It represents the largest and most important heading on the page
+* HTML has heading levels from `<h1>` (largest) to `<h6>` (smallest)
+* The text inside the `<h1>` tag is what appears on the screen
+
+Some other elements you may want to include in your application include:
+
+`<img>`
+* Displays an image based on a source location
+```
+<img src="/assets/myImage.png" />
+```
+
+`<a>`
+* Creates a clickable link
+* Uses a property called `href` to define the destination of the link
+
+`<input>`
+* Allows users to type in information, such as `text`, `password`, `email`
+* Commonly used for forms
+
+`<form>`
+* Creates a form for your application
+```
+<form>
+  <input type="text" placeholder="Username" />
+  <button type="submit">Submit</button>
+</form>
+```
+
+To make any changes to your application manually, use the following steps:
+* Edit src/App.jsx
+* Save the file
+* The browser updates automatically
+
+## Coding with Agentic AI
+VSCode’s Agent mode can help you go from idea → working code by generating files, editing multiple parts of your project, and fixing errors with you. Now that you have a template, VSCode can easily work to develop features on top of the template. 
+
+### Tell the Agent what you want to build
+Open the Agent/Agent Build panel (varies by extension, but usually in the sidebar or command palette).
+
+Give it a clear goal, plus constraints. Example prompt:
+
+“Create an expense management application that has a chat interface for receipts to be uploaded.”
+
+You can also ask a separate LLM to create a prompt, so that features are more specific. Try asking an LLM for a project scaffold to feed into a coding agent, and the LLM will create a framework you can provide VSCode.
+
+### Debug with the Agent
+When something breaks, paste the error and ask for a fix. If your app won’t run, copy the exact terminal error and try asking:
+
+“Here’s my error. Explain what it means and give the smallest fix.”
+
+“Fix this without changing the project structure.”
+
+“Show me the exact file + lines to edit.”
+
 ## Minimal Project Structure
+```
 .
 ├── node_modules/
 ├── index.html
@@ -81,84 +157,7 @@ Congratulations, your web application is now running!
     └── App.jsx
     ├── index.css
     └── App.css
-
-
-## File overview
-### node_modules
-
-### index.html
-The single HTML file. React mounts into this file.
-
-### package.json, package-lock.json
-
-### vite.config.js
-
-### .gitignore
-
-### main.jsx and App.jsx
-The entry point that connects React to the DOM.
-The main React component where you write JSX.
-
-### index.css and App.css
-
-## JSX Programming
-
-JSX allows you to write HTML-like code inside JavaScript.
-
-Example (src/App.jsx):
-
-function App() {
-  return (
-    <div>
-      <h1>Hello, world</h1>
-      <p>This is JSX</p>
-    </div>
-  );
-}
-
-export default App;
-
-## Making Changes
-
-Edit src/App.jsx
-
-Save the file
-
-The browser updates automatically
-
-No manual refresh required.
-
-### Adding a New Component
-
-Create a new file:
-
-src/Hello.jsx
-
-function Hello() {
-  return <h2>Hello from another component</h2>;
-}
-
-export default Hello;
-
-
-Import and use it in App.jsx:
-
-import Hello from "./Hello";
-
-function App() {
-  return (
-    <div>
-      <Hello />
-    </div>
-  );
-}
-
-## Coding with Agentic AI
-
-
-## Stopping the Server
-
-To stop the development server: Ctrl + C
+```
 
 ## Summary
 Congratulations, you've now set up your own web app to be built into anything you choose!
